@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author Darinka
  */
-public class principal extends Application {
+public class Principal extends Application {
     
     @Override
     public void start(Stage primaryStage) {
@@ -44,6 +44,8 @@ public class principal extends Application {
         primaryStage.setTitle("Cambio de color de la ventana");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        
     }
     
     public void cambiarColor(Button btn,String color,StackPane root){
@@ -55,6 +57,8 @@ public class principal extends Application {
             }
         });
     }
+    
+    
     /**
      * @param args the command line arguments
      */
