@@ -45,6 +45,30 @@ public class ColorStation {
     
     
     }
+
+    public StackPane getRoot() {
+    	return this.root;
+    }
+    
+    public Button getRojo() {
+    	return this.rojo;
+    }
+    
+    public Button getVerde() {
+    	return this.verde;
+    }
+    
+    public Button getAzul() {
+    	return this.azul;
+    }
+    
+    public String getcolorActual() {
+    	return this.colorActual;
+    }
+    
+    public void setcolorActual(String colorActual) {
+    	this.colorActual=colorActual;
+    }
     
    
 }
