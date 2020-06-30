@@ -1,73 +1,50 @@
 package observer.fx;
 
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 
 public class ColorStation {
-	private StackPane root;
-    
-	private Button rojo;
-	private Button azul;
-	private Button verde;
-	private String colorActual;
+	private StackPane root;	
+	private static String colorActual;
+	private ArrayList<ColorButton> botones;
+	
+	
+	
     
     public ColorStation(){
     	this.root = new StackPane();
-        
-    	this.rojo = new Button();
-        this.azul = new Button();
-        this.verde = new Button();
-        
+    	this.botones=new ArrayList<ColorButton>();
         
     	
-    	this.rojo.setText("Rojo");
-        this.verde.setText("Verde");
-        this.azul.setText("Azul");
-        
-        cambiarColor(this.rojo,"-fx-background-color: #a00000");
-        cambiarColor(this.verde,"-fx-background-color: #008000");
-        cambiarColor(this.azul,"-fx-background-color: #293492");
+    	this.botones.add(new ColorButton("Rojo","-fx-background-color: #a00000",this));
+    	this.botones.add(new ColorButton("Verde","-fx-background-color: #008000",this));
+    	this.botones.add(new ColorButton("Azul","-fx-background-color: #293492",this));
+    	
+           	
+    	
     }
     
-    public void cambiarColor(Button btn,String color){
-        
-    	btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-            	colorActual = btn.getText();
-            	root.setStyle(color);
-                
-            }
-        });
-    
-    
-    }
+
 
     public StackPane getRoot() {
     	return this.root;
     }
     
-    public Button getRojo() {
-    	return this.rojo;
+       
+    public static String getcolorActual() {
+    	return ColorStation.colorActual;
     }
     
-    public Button getVerde() {
-    	return this.verde;
+    public static void setcolorActual(String colorActual) {
+    	ColorStation.colorActual=colorActual;
     }
     
-    public Button getAzul() {
-    	return this.azul;
-    }
-    
-    public String getcolorActual() {
-    	return this.colorActual;
-    }
-    
-    public void setcolorActual(String colorActual) {
-    	this.colorActual=colorActual;
+    public ArrayList<ColorButton> getBotones(){
+    	return this.botones;
     }
     
    

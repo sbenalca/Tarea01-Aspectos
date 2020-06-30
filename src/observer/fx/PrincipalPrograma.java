@@ -17,16 +17,24 @@ import javafx.stage.Stage;
  */
 public class PrincipalPrograma extends Application {
 	public static ColorStation station;
+	
     @Override
     public void start(Stage primaryStage) {
+    	
         
     	station = new ColorStation();  
+    	Button nuevoBoton=new Button("Nuevo Color");
+    	
+    	
         
        
         VBox hb=new VBox();
-        hb.getChildren().add(station.getRojo());
-        hb.getChildren().add(station.getVerde());
-        hb.getChildren().add(station.getAzul());
+        
+        for (ColorButton c:station.getBotones()){
+        hb.getChildren().add(c.getBtn());
+        	
+        }
+        
         station.getRoot().getChildren().add(hb);
         hb.setSpacing(5);
         hb.setAlignment(Pos.CENTER);
@@ -40,6 +48,22 @@ public class PrincipalPrograma extends Application {
         
         
     }   
+    
+public void nuevoColor(Button btnc){
+        
+    	btnc.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {            	
+            	
+            	
+            	
+                
+            }
+        });
+    
+    
+    }
     
     
     /**
