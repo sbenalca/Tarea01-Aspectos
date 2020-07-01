@@ -22,7 +22,7 @@ public aspect Notificar {
 	after(): nuevo(){
 		
 		
-		System.out.println("Se ha añadido un nuevo boton de color: "+PrincipalPrograma.colorNuevoBoton);
+		System.out.println("Se ha agregado un nuevo boton de color: "+PrincipalPrograma.colorNuevoBoton);
 			
 	}
 	
