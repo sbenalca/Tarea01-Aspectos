@@ -13,11 +13,18 @@ public aspect Notificar {
 	after(): cambio(){
 		
 		
-		System.out.println("Se ha cambiado el color de la ventana a: "+ColorStation.getcolorActual());
+		System.out.println("Se ha cambiado el color de la ventana a:"+ColorStation.getcolorActual());
 			
 	}
-	
-	
+
+	pointcut nuevo(): call(* nuevoBoton*(..));
+
+	after(): nuevo(){
+		
+		
+		System.out.println("Se ha añadido un nuevo boton de color: "+PrincipalPrograma.colorNuevoBoton);
+			
+	}
 	
 	
 }
