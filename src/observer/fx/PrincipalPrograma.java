@@ -37,7 +37,31 @@ public class PrincipalPrograma extends Application {
         VBox hb=new VBox();
         VBox hb2=new VBox();        
         
+        Button nuevoBoton=new Button("Nuevo Color");
+        nuevoBoton.setPrefWidth(200);
         
+        cambiarColorNuevo(nuevoBoton,hb);
+        
+        for (ColorButton c:station.getBotones()){
+            hb.getChildren().add(c.getBtn());
+            	
+            }
+        
+        
+        
+        hb2.getChildren().add(nuevoBoton);
+        hb.setSpacing(5);
+        hb.setAlignment(Pos.CENTER);
+        hb2.setSpacing(5);
+        hb2.setAlignment(Pos.BOTTOM_CENTER);
+        hb2.setPadding(new Insets(0,0,10,0));
+        
+        
+        
+        
+        station.getRoot().add(hb,0,1);
+        station.getRoot().add(hb2,0,0);
+        station.getRoot().setAlignment(Pos.CENTER);
         
         Scene scene = new Scene(station.getRoot(), 500, 500);
         
