@@ -17,6 +17,7 @@ public class ColorButton {
 	public ColorButton(String color,String colorCode,ColorStation st) {
 		this.st=st;
 		this.btn=new Button();
+		this.btn.setPrefWidth(200);
 		this.btn.setText(color);
 		this.colorCode=colorCode;
 		this.color=color;

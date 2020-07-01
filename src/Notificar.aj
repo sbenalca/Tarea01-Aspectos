@@ -13,9 +13,11 @@ public aspect Notificar {
 	after(): cambio(){
 		
 		
-		System.out.println("Se ha cambiado el color de la ventana a:"+ColorStation.getcolorActual());
+		System.out.println("Se ha cambiado el color de la ventana a: "+ColorStation.getcolorActual());
 			
 	}
+	
+	
 	
 	
 }

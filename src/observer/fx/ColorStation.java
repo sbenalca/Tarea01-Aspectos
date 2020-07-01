@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 public class ColorStation {
-	private StackPane root;	
+	private GridPane root;	
 	private static String colorActual;
 	private ArrayList<ColorButton> botones;
 	
@@ -16,7 +18,7 @@ public class ColorStation {
 	
     
     public ColorStation(){
-    	this.root = new StackPane();
+    	this.root = new GridPane();
     	this.botones=new ArrayList<ColorButton>();
         
     	
@@ -29,8 +31,8 @@ public class ColorStation {
     }
     
 
-
-    public StackPane getRoot() {
+    
+    public GridPane getRoot() {
     	return this.root;
     }
     
